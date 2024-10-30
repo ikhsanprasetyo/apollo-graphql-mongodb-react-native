@@ -14,12 +14,15 @@ app.use(function(req, res, next) {
 });
 
 Mongoose.Promise = global.Promise;
-Mongoose.connect('mongodb://localhost/apollo', (err) => {
+Mongoose.connect(
+ "mongodb://inventoriku:inventoriku123123@103.161.185.61:55555/inventoriku?authMechanism=DEFAULT",
+ (err) => {
   if (err) {
-    return err;
+   return err;
   }
   return true;
-});
+ }
+);
 
 const seed = require('./seed');
 
